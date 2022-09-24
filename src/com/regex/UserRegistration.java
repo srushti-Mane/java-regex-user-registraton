@@ -44,7 +44,8 @@ public class UserRegistration {
         return MobNo.matches("^(91)\\s{1}[7-9]{1}[0-9]{9}$");//UC4
     }
     public static boolean password(String password) {
-        String pattern = "[a-zA-Z0-9]{8,}$";
+        //String pattern = "[a-zA-Z0-9]{8,}$";//UC5
+        String pattern = "^[A-Z]{1}[a-zA-Z0-9]{7,}$";//UC6
         if (password.matches(pattern)) {
             return true;
         }
