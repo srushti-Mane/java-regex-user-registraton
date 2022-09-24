@@ -47,7 +47,8 @@ public class UserRegistration {
         String pattern1 = "[a-zA-Z0-9]{8,}$";//UC5
         String pattern2 = "^[A-Z]{1}[a-zA-Z0-9]{7,}$";//UC6
         String pattern3 = "^[A-Z]{1}+[a-zA-z1-9]{6,}[1-9]{1}$";//UC7
-        if (password.matches(pattern3)) {
+        String pattern4 = "(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$";//UC8
+        if (password.matches(pattern4)) {
             return true;
         }
         return false;
