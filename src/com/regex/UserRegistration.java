@@ -14,6 +14,9 @@ public class UserRegistration {
             Scanner mail = new Scanner(System.in);
             System.out.println("Enter your email : ");
             String Email = mail.nextLine();
+            System.out.println("Enter your Mobile Number:");
+            String MobNo = scan.nextLine();
+
 
             System.out.println("first name is : " +firstName);
             System.out.println("first name is valid: " + firstName(firstName));
@@ -21,6 +24,9 @@ public class UserRegistration {
             System.out.println("last name is : " + lastName(lastName));
             System.out.println("EmailID is : " + Email);
             System.out.println("EmailID is : " + Email(Email));
+            System.out.println("mobile number is : " + MobNo);
+            System.out.println("mobile number is : " + MobNo(MobNo));
+
         }
         private static boolean firstName(String firstName) {
             return firstName.matches("[A-Z]{1}[a-z]{3,}"); //UC1
@@ -31,5 +37,8 @@ public class UserRegistration {
     }
     public static boolean Email(String Email) {
         return Email.matches("^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?"); //UC3
+    }
+    private static boolean MobNo(String MobNo) {
+        return MobNo.matches("^(91)\\s{1}[7-9]{1}[0-9]{9}$");
     }
 }
